@@ -1,0 +1,196 @@
+/* ==========================================================================
+   Background cover
+   ========================================================================== */
+html {
+    background: url('../img/bg2.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    background-color: transparent;
+    color: white;
+}
+
+.container {
+    padding-top: 10%;
+}
+
+.overlay {
+    background-color: rgba(43, 48, 59, .6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+
+    -webkit-transition: background 1s;
+    -moz-transition: background 1s;
+    -o-transition: background 1s;
+    transition: background 1s
+}
+
+/* ==========================================================================
+   Me & About area
+   ========================================================================== */
+.me {
+    text-align: center;
+}
+
+.me img {
+    max-width: 180px;
+}
+
+.about {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.about h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 40px;
+    display: inline-block;
+    position: relative;
+}
+
+.about h1:before {
+    border-top: 3px solid #FFFFFF;
+    content: "";
+    display: block;
+    left: 50%;
+    margin-left: -320px;
+    position: absolute;
+    top: 55%;
+    width: 68px;
+    z-index: 0;
+}
+
+.about h1:after {
+    border-top: 3px solid #FFFFFF;
+    content: "";
+    display: block;
+    right: 50%;
+    margin-right: -320px;
+    position: absolute;
+    top: 55%;
+    width: 68px;
+    z-index: 0;
+}
+
+.about h6 {
+    font-family: 'Roboto', 'Arial';
+    margin-top: 0;
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   Window Terminal
+   ========================================================================== */
+.window {
+    margin-top: 20px;
+}
+
+#term {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.window-header {
+    background: url('../img/window_bg.png') repeat-x;
+    width: 100%;
+    height: 29px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.window-header .window-title {
+    display: inline-block;
+    font-family: 'Roboto', 'Arial';
+    font-size: 12px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
+}
+
+.window-header img {
+    padding-left: 10px;
+    margin: 0;
+}
+
+/* ==========================================================================
+   Parallax
+   ========================================================================== */
+.control {
+    position: fixed;
+    width: 170px;
+    cursor: pointer;
+}
+
+#rightControl {
+    right: 0px;
+    top: 40%;
+}
+
+#leftControl {
+    left: 0px;
+    top: 40%;
+}
+
+.arrow {
+    opacity: 0.2;
+    height: 60px;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+}
+
+.dirText {
+    color: white;
+    font-size: 40px;
+    opacity: 0.0;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.control-top {
+    width: 145px;
+    left: 45%;
+}
+
+.control-bottom {
+    width: 145px;
+    left: 45%;
+    bottom: 0;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 768px ) {
+    .control-bottom {
+        width: 100px;
+        left: 40%;
+    }
+
+    .control-top {
+        width: 100px;
+        left: 40%;
+    }
+
+    .arrow {
+        height: 40px;
+    }
+
+    .dirText {
+        font-size: 20px;
+    }
+}
