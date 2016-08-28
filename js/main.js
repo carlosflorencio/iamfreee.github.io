@@ -1,5 +1,26 @@
 /*
  |--------------------------------------------------------------------------
+ | Functions
+ |--------------------------------------------------------------------------
+ */
+function calculate_age(birth_month, birth_day, birth_year) {
+    var today_date = new Date(), today_year, today_month, today_day, age;
+    today_year = today_date.getFullYear();
+    today_month = today_date.getMonth();
+    today_day = today_date.getDate();
+    age = today_year - birth_year;
+
+    if (today_month < (birth_month - 1)) {
+        age--;
+    }
+    if (((birth_month - 1) == today_month) && (today_day < birth_day)) {
+        age--;
+    }
+    return age;
+}
+
+/*
+ |--------------------------------------------------------------------------
  | Terminal
  |--------------------------------------------------------------------------
  */
@@ -17,54 +38,57 @@ jQuery(function ($, undefined) {
                 this.echo('');
                 this.echo('\tsome other commands like clear are also avaiable');
             },
-            whoami: function() {
-                this.echo("Hello, my name is Carlos Florêncio, i am a Computer Science student from lisbon.");
-                this.echo("I'm a programmer who likes to learn new things and best practices.");
-                this.echo("<3 Open Source software.");
-                this.echo("\nSometimes i work as a freelancer, so feel free to get in touch via [[b;#44D544;]contact] command");
+            whoami: function () {
+                this.echo("\tHello, my name is Carlos Florêncio, i am a Software Engineer from lisbon.");
+                this.echo("\tI'm a programmer who likes to learn new things and best practices.");
+                this.echo("\t<3 Open Source software.");
+                this.echo("\n\tSometimes i work as a freelancer, so feel free to get in touch via [[b;#44D544;]contact] command");
             },
             status: function () {
-                this.echo('[[;#000;#FF0000]Too busy to work right now, sorry!]');
+                this.echo('[[;#000;#33ff64]Avaiable to hire! (Partial)]');
             },
-            languages: function() {
+            languages: function () {
+                this.echo('\tJAVA           ***************');
+                this.echo('\tC#             ***************');
                 this.echo('\tPHP            ***************');
-                this.echo('\tJAVA           **************');
-                this.echo('\tHTML5          **************');
-                this.echo('\tCSS3           **************');
-                this.echo('\tJavaScript     **********');
-                this.echo('\tPython         *********')
+                this.echo('\tHTML/CSS       ***************');
+                this.echo('\tC/C++          *************');
+                this.echo('\tAndroid        *************');
+                this.echo('\tJavaScript     *************');
+                this.echo('\tPython         ***********');
+                this.echo('\tSQL            ***********');
             },
-            frameworks: function() {
+            frameworks: function () {
                 this.echo('\tLaravel');
                 this.echo('\tTwitter Bootstrap');
                 this.echo('\tHTML5 Boilerplate');
-                this.echo('\tCodeigniter');
+                this.echo('\tAngularJS');
+                this.echo('\tVueJS');
             },
-            tools: function() {
-                this.echo('Phpstorm');
-                this.echo('Sublime Text');
-                this.echo('Brackets');
-                this.echo('Eclipse');
-                this.echo('Composer');
-                this.echo('Chrome');
-                this.echo('Command Line :p');
+            tools: function () {
+                this.echo('\tIntelliJ IDE\'s');
+                this.echo('\tVisual Studio');
+                this.echo('\tSublime Text');
+                this.echo('\tVisual Studio Code');
+                this.echo('\tAndroid Studio');
+                this.echo('\tCommand Line :p');
             },
-            age:function() {
-              this.echo('I was born on 9/10/1993 (think!)')
+            age: function () {
+                this.echo('\tI am ' + calculate_age(10, 9, 1993));
             },
-            contact: function() {
+            contact: function () {
                 var self = this;
-                this.push(function(command) {
+                this.push(function (command) {
                     if (command.match(/y|yes|sim/i)) {
-                        self.echo('Okay then:');
-                        self.echo('email: carlosmflorencio@gmail.com');
+                        self.echo('\tOkay then:');
+                        self.echo('\temail: carlosmflorencio@gmail.com');
                         self.pop();
                     } else if (command.match(/n|no|nao/i)) {
-                        self.echo('bahhhh');
+                        self.echo('\tbahhhh');
                         self.pop();
                     }
                 }, {
-                    prompt: 'wuuuuuuuut, are you sure? '
+                    prompt: '\twuuuuuuuut, are you sure? '
                 });
             }
         },
@@ -77,10 +101,10 @@ jQuery(function ($, undefined) {
 });
 
 /*
-|--------------------------------------------------------------------------
-| Text rotator
-|--------------------------------------------------------------------------
-*/
+ |--------------------------------------------------------------------------
+ | Text rotator
+ |--------------------------------------------------------------------------
+ */
 $(".rotate").textrotator({
     animation: "dissolve", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
     separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
@@ -89,10 +113,10 @@ $(".rotate").textrotator({
 
 
 /*
-|--------------------------------------------------------------------------
-| Parallax
-|--------------------------------------------------------------------------
-*/
+ |--------------------------------------------------------------------------
+ | Parallax
+ |--------------------------------------------------------------------------
+ */
 var rightKey, leftKey, topKey, bottomKey;
 
 //Set up the triggers for the arrow keys
