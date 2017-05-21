@@ -40,36 +40,39 @@ jQuery(function ($, undefined) {
             },
             whoami: function () {
                 this.echo("\tHello, my name is Carlos Florêncio, i am a Software Engineer from lisbon.");
-                this.echo("\tI'm a programmer who likes to learn new things and best practices.");
-                this.echo("\t<3 Open Source software.");
+                this.echo("\tI'm a programmer who likes to learn new technologies and best practices.");
+                this.echo("\tI try to make all my code open source.");
                 this.echo("\n\tSometimes i work as a freelancer, so feel free to get in touch via [[b;#44D544;]contact] command");
             },
             status: function () {
-                this.echo('[[;#000;#33ff64]Avaiable to hire! (Partial)]');
+                this.echo('[[;#000;#FF4545]Not avaiable to hire right now.]');
             },
             languages: function () {
-                this.echo('\tJAVA           ***************');
                 this.echo('\tC#             ***************');
+                this.echo('\tJava           ***************');
                 this.echo('\tPHP            ***************');
-                this.echo('\tHTML/CSS       ***************');
+                this.echo('\tJS ES5/ES6     ***************');
+                this.echo('\tNodeJS         ***************');
+                this.echo('\tHTML5/CSS      ***************');
                 this.echo('\tC/C++          *************');
                 this.echo('\tAndroid        *************');
-                this.echo('\tJavaScript     *************');
                 this.echo('\tPython         ***********');
                 this.echo('\tSQL            ***********');
             },
             frameworks: function () {
+                this.echo('\tASP.NET Core & EF Core');
                 this.echo('\tLaravel');
-                this.echo('\tTwitter Bootstrap');
-                this.echo('\tHTML5 Boilerplate');
-                this.echo('\tAngularJS');
-                this.echo('\tVueJS');
+                this.echo('\tExpressJs');
+                this.echo('\tReactJs & Redux');
+                this.echo('\tAngularJs');
+                this.echo('\tVueJs');
+                this.echo('\tTwitter Bootstrap/Semantic UI');
             },
             tools: function () {
                 this.echo('\tIntelliJ IDE\'s');
                 this.echo('\tVisual Studio');
-                this.echo('\tSublime Text');
                 this.echo('\tVisual Studio Code');
+                this.echo('\tSublime Text');
                 this.echo('\tAndroid Studio');
                 this.echo('\tCommand Line :p');
             },
